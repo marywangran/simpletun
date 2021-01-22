@@ -28,28 +28,26 @@ static int tun_ifup(const char *ifname)
 {
 	struct ifreq ifr;
 	int sk, err;
-	if (sk = socket(PF_INET, SOCK_DGRAM, 0) < 0) {
-		err = -errno;
-		return err;
-	}
-
+	sk = socket(PF_INET, SOCK_DGRAM, 0);
+	if (sk < 0)
+		return -errno;
 	memset(&ifr, 0, sizeof(ifr));
 	strncpy(ifr.ifr_name, ifname, sizeof(ifr.ifr_name));
 	if (ioctl(sk, SIOCGIFFLAGS, &ifr) < 0) {
 		err = -errno;
-		goto end;
+		goto done;
 	}
 	if (ifr.ifr_flags & IFF_UP) {
 		err = -EALREADY;
-		goto end;
+		goto done;
 	}
 	ifr.ifr_flags |= IFF_UP;
 	if (ioctl(sk, SIOCSIFFLAGS, &ifr) < 0) {
 		err = -errno;
-		goto end;
+		goto done;
 	}
 	err = 0;
-end:
+done:
 	close(sk);
 	return err;
 }
