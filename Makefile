@@ -1,4 +1,4 @@
-all:	simpletun
+all:	simpletun tunnat
 
 clean:
-	rm simpletun
+	rm -f simpletun tunnat
