@@ -93,21 +93,12 @@ Host A:
 PING 64:ff9b::172.18.0.1(64:ff9b::ac12:1) 56 data bytes
 64 bytes from 64:ff9b::ac12:1: icmp_seq=1 ttl=62 time=1.06 ms
 64 bytes from 64:ff9b::ac12:1: icmp_seq=2 ttl=62 time=0.983 ms
-64 bytes from 64:ff9b::ac12:1: icmp_seq=3 ttl=62 time=0.979 ms
-64 bytes from 64:ff9b::ac12:1: icmp_seq=4 ttl=62 time=1.04 ms
-64 bytes from 64:ff9b::ac12:1: icmp_seq=5 ttl=62 time=0.823 ms
 
 ## tcpdump result
 12:06:32.047425 IP6 fdbd:dc03:ff:1:1:227:88:205 > 64:ff9b::ac12:1: ICMP6, echo request, seq 1, length 64
 12:06:32.048469 IP6 64:ff9b::ac12:1 > fdbd:dc03:ff:1:1:227:88:205: ICMP6, echo reply, seq 1, length 64
 12:06:33.049774 IP6 fdbd:dc03:ff:1:1:227:88:205 > 64:ff9b::ac12:1: ICMP6, echo request, seq 2, length 64
 12:06:33.050734 IP6 64:ff9b::ac12:1 > fdbd:dc03:ff:1:1:227:88:205: ICMP6, echo reply, seq 2, length 64
-12:06:34.052741 IP6 fdbd:dc03:ff:1:1:227:88:205 > 64:ff9b::ac12:1: ICMP6, echo request, seq 3, length 64
-12:06:34.053700 IP6 64:ff9b::ac12:1 > fdbd:dc03:ff:1:1:227:88:205: ICMP6, echo reply, seq 3, length 64
-12:06:35.089208 IP6 fdbd:dc03:ff:1:1:227:88:205 > 64:ff9b::ac12:1: ICMP6, echo request, seq 4, length 64
-12:06:35.090151 IP6 64:ff9b::ac12:1 > fdbd:dc03:ff:1:1:227:88:205: ICMP6, echo reply, seq 4, length 64
-12:06:36.091186 IP6 fdbd:dc03:ff:1:1:227:88:205 > 64:ff9b::ac12:1: ICMP6, echo request, seq 5, length 64
-12:06:36.091990 IP6 64:ff9b::ac12:1 > fdbd:dc03:ff:1:1:227:88:205: ICMP6, echo reply, seq 5, length 64
 ```
 
 Host B:
@@ -117,12 +108,6 @@ Host B:
 23:03:52.193765 IP 172.18.0.1 > 123.110.0.1: ICMP echo reply, id 13, seq 1, length 64
 23:03:53.196104 IP 123.110.0.1 > 172.18.0.1: ICMP echo request, id 13, seq 2, length 64
 23:03:53.196250 IP 172.18.0.1 > 123.110.0.1: ICMP echo reply, id 13, seq 2, length 64
-23:03:54.198985 IP 123.110.0.1 > 172.18.0.1: ICMP echo request, id 13, seq 3, length 64
-23:03:54.199038 IP 172.18.0.1 > 123.110.0.1: ICMP echo reply, id 13, seq 3, length 64
-23:03:55.235536 IP 123.110.0.1 > 172.18.0.1: ICMP echo request, id 13, seq 4, length 64
-23:03:55.235559 IP 172.18.0.1 > 123.110.0.1: ICMP echo reply, id 13, seq 4, length 64
-23:03:56.237465 IP 123.110.0.1 > 172.18.0.1: ICMP echo request, id 13, seq 5, length 64
-23:03:56.237489 IP 172.18.0.1 > 123.110.0.1: ICMP echo reply, id 13, seq 5, length 64
 ```
 
 enjoy yourself!
