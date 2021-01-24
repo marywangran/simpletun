@@ -64,6 +64,7 @@ ping 172.18.0.1
 for tunnat64:
 
 Host A -----------------Host M------------------- Host B
+
 On host A(IPv6 only):
 ```bash
 ip -6 addr add dev enp0s8 fdbd:dc03:ff:1:1:227:88:205/64
@@ -78,7 +79,7 @@ ip -6 route add default dev tun1
 ip route add 123.110.0.1/32 dev tun1
 ```
 
-On host B:
+On host B(IPv4 only):
 ```bash
 ifconfig enp0s10 172.18.0.1/24
 route add default gw 172.18.0.2
